@@ -23,10 +23,14 @@
 [ 접속 테스트 ]
 
 1. python [manage.py](http://manage.py) runserver 0.0.0.0:8000
-2. http://ip주소/polls/project_list
+
+2. http://ip주소/polls/project_list  
 ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
-3. http://ip주소/polls/admin
-ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
+
+3. http://ip주소/polls/adminex)  
+[http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
+
+
 4. 접속 테스트 끝나면 데몬으로 계속 띄워두기
 (만약 데몬이 아닌 제대로 배포하고 싶다면 wsgi와 nginx를 이용해 제대로 배포하시면 됩니다.)
 
@@ -44,7 +48,7 @@ ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000
 
     - Project Name : 입력할 때 공백 값 없이 입력해주세요.
     - Image Upload : 이미지 파일 여러개를 한번에 올려주세요.
-    - Class : Add 버튼을 눌러 분류하고자 하는 클래스를 입력해주세요.
+    - Class : Add 버튼을 눌러 분류하고자 하는 클래스를 입력해주세요. (컨트롤 + A를 누르면 전체 선택 됩니다.)  
 
         ![3.png](./image/3.png)
 
