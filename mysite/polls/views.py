@@ -40,6 +40,32 @@ def project_list(request):
     mylist = zip(project_list, progress_list, index_list)
     return render(request, 'blog/project_list.html', {'mylist': mylist})
 
+def def_project_list(request):
+    project_list = Project.objects.all()
+    progress_list, index_list = [], []
+
+    index, percent = 0, 1
+
+    for project in project_list:
+        images = Images.objects.filter(project_id=project.pk)
+
+        index += 1
+        total_cnt, label_cnt = 1, 1
+
+        for image in images:
+            total_cnt += 1
+
+            if image.data_class != "None":
+                label_cnt += 1
+
+        percent = int((label_cnt / total_cnt)*100)
+
+        index_list.append(index)
+        progress_list.append(percent)
+
+    mylist = zip(project_list, progress_list, index_list)
+    return mylist
+
 
 @csrf_exempt
 def main_page(request):
@@ -137,7 +163,10 @@ def new_project(request):
             for count, x in enumerate(request.FILES.getlist("files")):
                 handle_uploaded_file(x, data.id, project_name)
             context = {'form':form,}
-            return render(request, 'blog/new_project.html', context)
+        
+        mylist = def_project_list(request)
+        return render(request, 'blog/project_list.html', {'mylist': mylist})
+
     else:
         form = UploadFileForm()
 
