@@ -27,8 +27,8 @@
 2. http://ip주소/polls/project_list  
 ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
 
-3. http://ip주소/polls/adminex)  
-[http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
+3. http://ip주소/polls/admin
+ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
 
 
 4. 접속 테스트 끝나면 데몬으로 계속 띄워두기
