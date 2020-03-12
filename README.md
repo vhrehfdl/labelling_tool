@@ -27,7 +27,7 @@
 2. http://ip주소/polls/project_list  
 ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
 
-3. http://ip주소/polls/admin
+3. http://ip주소/polls/admin  
 ex) [http://113.142.171.133:8000/polls/project_list](http://115.145.173.133:8000/polls/project_list)
 
 
